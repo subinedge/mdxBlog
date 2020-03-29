@@ -3,13 +3,13 @@
 }
 .posts h1 {
   text-align: center;
-  letter-spacing: 5px;
+  letter-spacing: 2px;
   margin-bottom: 0.5rem;
   text-transform: capitalize;
   font-size: 48px;
 }
 .posts h4 {
-  letter-spacing: 5px;
+  letter-spacing: 3px;
   text-transform: capitalize;
   font-size: 14px;
   text-align: center;
