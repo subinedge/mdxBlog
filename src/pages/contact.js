@@ -1,12 +1,12 @@
 import React from 'react'
 import Layout from '../components/layout'
 
-const Error = () => {
+const Contact = () => {
   return (
     <Layout>
-      <h1>Error page dude</h1>
+      <h3>Contact page</h3>
     </Layout>
   )
 }
 
-export default Error
+export default Contact

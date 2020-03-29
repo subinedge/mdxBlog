@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css?family=Russo+One&display=swap');
+
+.navbar {
+  background: var(--offWhite);
+}
+
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.25rem;
+}
+.logo-btn {
+  background: transparent;
+  border: none;
+  outline: none;
+}
+.logo-btn:hover {
+  cursor: pointer;
+}
+.logo-icon {
+  color: var(--primaryColor);
+  font-size: 1.5rem;
+}
+
+.logo-custom {
+  font-family: 'Russo One', sans-serif;
+  text-transform: uppercase;
+  /* max-width: 1170px; */
+  letter-spacing: 2px;
+}
+
+.logo-header {
+  margin-bottom: 0;
+}
+
+.nav-links {
+  list-style-type: none;
+  font-family: 'Helvetica Neue', sans-serif;
+  transition: var(--mainTransition);
+  height: 0;
+  overflow: hidden;
+  text-transform: uppercase;
+}
+.show-nav {
+  height: 216px;
+}
+.nav-links a {
+  display: block;
+  padding: 1rem 1.25rem;
+  text-decoration: none;
+  text-transform: capitalize;
+  color: var(--mainBlack);
+  transition: var(--mainTransition);
+  font-weight: bold;
+  letter-spacing: 2px
+}
+.nav-links a:hover {
+  color: var(--primaryColor);
+}
+.nav-social-links {
+  display: none;
+}
+
+@media screen and (max-width: 575px) {
+  .navbar {
+    padding: 0 1rem;
+  }
+
+  .logo-header {
+    font-size: 20px;
+  }
+}
+
+
+@media screen and (min-width: 576px) {
+  .navbar {
+    padding: 0 2rem;
+  }
+
+  .logo-custom {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .logo-btn {
+    display: none;
+  }
+  .nav-center {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .nav-links {
+    height: auto;
+    display: flex;
+  }
+  .nav-social-links {
+    display: flex;
+    line-height: 0;
+  }
+  .nav-social-links a {
+    color: black;
+    margin: 0 0.5rem;
+    font-size: 1.2rem;
+    transition: var(--mainTransition);
+  }
+  .nav-social-links a:hover {
+    color: var(--mainBlack);
+    transform: translateY(-5px);
+  }
+}
