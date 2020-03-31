@@ -5,6 +5,7 @@ import AniLink from "gatsby-plugin-transition-link/AniLink";
 import {graphql} from 'gatsby'
 import Layout from '../components/layout'
 import { MDXRenderer } from "gatsby-plugin-mdx"
+import SEO from '../components/SEO'
 
 const postTemplate = ({data}) => {
   const {title, date, author, image} = data.mdx.frontmatter;
@@ -13,6 +14,7 @@ const postTemplate = ({data}) => {
   
   return (
     <Layout>
+      <SEO title={title} description={title}/>
       <section className={styles.template}>
         <AniLink fade to='/' className={styles.link}>Back to all posts</AniLink>
         <div className={styles.info}>

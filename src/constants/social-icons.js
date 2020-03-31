@@ -1,5 +1,5 @@
 import React from 'react'
-import {FaMediumM, FaTwitter, FaInstagram, FaGithub, FaLinkedinIn} from 'react-icons/fa'
+import {FaMediumM, FaTwitter,FaFacebook, FaInstagram, FaGithub, FaLinkedinIn} from 'react-icons/fa'
 
 export default [
   {
@@ -10,6 +10,11 @@ export default [
   {
     icon:<FaTwitter/>,
     url:'https://twitter.com/cyber_punk09'
+  },
+
+  {
+    icon:<FaFacebook/>,
+    url:'https://facebook.com/subin.edge'
   },
 
   {
