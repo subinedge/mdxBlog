@@ -3,7 +3,7 @@ module.exports = {
     title:'JavaScript will Rule',
     description:'Learn through projects',
     author:'Subin Sudhakaran',
-    twitterUsername:'@cyberpunk_09',
+    twitterUsername:'@cyber_punk09',
     image:'/image-1.jpeg',
     siteUrl:'https://javascriptwillrule.netlify.com/'
   },
