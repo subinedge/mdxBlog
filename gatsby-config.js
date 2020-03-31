@@ -5,7 +5,7 @@ module.exports = {
     author:'Subin Sudhakaran',
     twitterUsername:'@cyberpunk_09',
     image:'/image-1.jpeg',
-    siteUrl:'https://javascriptwillrule.com'
+    siteUrl:'https://javascriptwillrule.netlify.com/'
   },
    plugins: [
     {
