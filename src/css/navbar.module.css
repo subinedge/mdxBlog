@@ -78,11 +78,11 @@
 
 @media screen and (max-width: 575px) {
   .navbar {
-    padding: 0 1rem;
+    padding: 0 0.3rem;
   }
 
   .logo-header {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 

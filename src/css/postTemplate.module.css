@@ -1,8 +1,8 @@
 .template {
-  width: 80vw;
-  margin: 4rem auto;
+  width: 90vw;
+  margin: 3rem auto;
   max-width: 750px;
-  padding: 2rem;
+  padding: 1.2rem;
   background: var(--mainWhite);
 }
 

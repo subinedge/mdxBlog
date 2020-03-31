@@ -11,13 +11,17 @@ const PostCard = ({post}) => {
   
   return (
     <article className={styles.card}>
-      <div className={styles.image}>
-        <Image fluid={img}/>
-      </div>
+      <AniLink to={slug} fade>
+        <div className={styles.image}>
+          <Image fluid={img}/>
+        </div>
+      </AniLink>
 
       <div className={styles.info}>
         <div>
-          <h2>{title}</h2>
+          <AniLink to={slug} fade className={styles.headerLink}>
+            <h2>{title}</h2>
+          </AniLink>
           <h6>
             <span>{date}</span> <span className={styles.dot}>&#183;</span><span className={styles.dot}>&#183;</span><span className={styles.dot}>&#183;</span> <span>{timeToRead} min read</span>
           </h6>

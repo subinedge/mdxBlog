@@ -20,3 +20,9 @@
   margin: 0 auto;
   max-width: 750px;
 }
+
+@media screen and (max-width: 575px) {
+  .posts h1 {
+    font-size: 40px;
+  }
+}
