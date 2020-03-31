@@ -2,6 +2,7 @@ import React from "react"
 import Layout from '../components/layout'
 import PostList from '../components/PostList'
 import {graphql, useStaticQuery} from 'gatsby'
+import SEO from '../components/SEO'
 
 const getPosts = graphql`
   query {
@@ -35,6 +36,7 @@ export default () => {
   
   return(
     <Layout>
+      <SEO title="Home | JS will rule" description="JavaScript will Rule Home Page"/>
       <PostList posts={posts}/>
     </Layout>
   )

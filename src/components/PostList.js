@@ -5,8 +5,8 @@ import styles from '../css/postlist.module.css'
 const PostList = ({posts}) => {
   return (
     <section className={styles.posts}>
-      <h1>FrontEndDev Blog</h1>
-      <h4>Live like they dream</h4>
+      <h1>Cookbook for FrontEnd Devs</h1>
+      <h4>Learn through building projects</h4>
 
       <div className={styles.center}>
         {posts.map(({node}, index)=> {

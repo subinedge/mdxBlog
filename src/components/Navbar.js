@@ -14,7 +14,9 @@ const Navbar = () => {
     <nav className={styles.navbar}>
       <div className={styles.navCenter}>
         <div className={styles.navHeader}>
-          <h2 className={styles.logoHeader}><span className={styles.logoCustom}>JavaScript</span><span className={styles.logoSecondary}> will rule</span></h2>
+          <AniLink to="/" fade className={styles.logoLink}>
+            <h2 className={styles.logoHeader}><span className={styles.logoCustom}>JavaScript</span><span className={styles.logoSecondary}> will rule</span></h2>
+          </AniLink>
           <button type="button" className={styles.logoBtn} onClick={toggleNav}>
             <FaAlignRight className={styles.logoIcon}/>
           </button>
@@ -26,7 +28,7 @@ const Navbar = () => {
           })}
         </ul>
 
-        <div className={styles.navSocialLinks}>
+        <div  className={isOpen? `${styles.navLinks} ${styles.showNavSocial}` : `${styles.navLinks}`}>
           {socialIcons.map((item, index)=> {
             return <a key={index} href={item.url} target="_blank" rel="noopener noreferrer">
               {item.icon}
