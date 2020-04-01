@@ -19,7 +19,7 @@ const PostCard = ({post}) => {
 
       <div className={styles.info}>
         <div>
-          <AniLink to={slug} fade className={styles.headerLink}>
+          <AniLink to={slug} fade aria-label="blog title" className={styles.headerLink}>
             <h2>{title}</h2>
           </AniLink>
           <h6>
@@ -28,7 +28,7 @@ const PostCard = ({post}) => {
           <p className={styles.tag}>{tag}</p>
           <p>{excerpt}</p>
           
-          <AniLink to={slug} fade className={styles.link}>See full Article</AniLink>
+          <AniLink to={slug} fade aria-label="see full article" className={styles.link}>See full Article</AniLink>
         </div>
       </div>
     </article>

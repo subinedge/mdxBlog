@@ -9,14 +9,14 @@ const Footer = () => {
     <footer className={styles.footer}>
       <div className={styles.links}>
         {links.map((item, index)=> {
-          return <AniLink fade key={index} to={item.path}>
+          return <AniLink fade key={index} aria-label="menu links on footer" to={item.path}>
             {item.text}
           </AniLink>
         })}
       </div>
       <div className={styles.icons}>
         {socialIcons.map((item, index)=> {
-          return <a href={item.url} key={index} target="_blank" rel="noopener noreferrer">
+          return <a href={item.url} key={index} aria-label="social media icons on footer" target="_blank" rel="noopener noreferrer">
             {item.icon}
           </a>
         })}

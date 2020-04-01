@@ -16,7 +16,7 @@ const postTemplate = ({data}) => {
     <Layout>
       <SEO title={title} description={title}/>
       <section className={styles.template}>
-        <AniLink fade to='/' className={styles.link}>Back to all posts</AniLink>
+        <AniLink fade to='/' aria-label="back to all blog posts" className={styles.link}>Back to all posts</AniLink>
         <div className={styles.info}>
           <h1>{title}</h1>
           <h4>
