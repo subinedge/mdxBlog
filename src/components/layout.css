@@ -45,6 +45,24 @@ pre {
   white-space: pre;
 }
 
+pre::-webkit-scrollbar-track
+{
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+pre::-webkit-scrollbar
+{
+	width: 6px;
+	background-color: #F5F5F5;
+}
+
+pre::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	background-color: #555;
+}
+
 main {
   min-height: calc(100vh - 62px);
 }
