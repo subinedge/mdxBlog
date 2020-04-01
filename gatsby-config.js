@@ -23,7 +23,21 @@ module.exports = {
         policy: [{ userAgent: '*', allow: '/' }]
       }
     },
-    `gatsby-plugin-mdx`,
+    {
+      resolve:`gatsby-plugin-mdx`,
+      options:{
+        gatsbyRemarkPlugins:[
+          {
+            resolve:`gatsby-remark-images`,
+            options:{
+              maxWidth: 590,
+              // loading:`lazy`,
+            },
+          },
+        ],
+          
+        }
+      },
     `gatsby-plugin-transition-link`,
     `gatsby-transformer-sharp`, 
     `gatsby-plugin-sharp`,

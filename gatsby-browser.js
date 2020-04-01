@@ -1,28 +1,7 @@
----
-title: second post
-slug: second-post
-image: ./images/image-2.jpeg
-date: 2019-06-07
-author: john smith
-tag: REACT
----
-
-# Ultimate Guide To Gatsby MDX
-
-Lorem ipsum dolor amet asymmetrical vinyl godard selvage food truck put a bird on it, _lumbersexual banjo subway tile pork belly shoreditch shaman readymade. Adaptogen offal coloring book, normcore franzen palo santo locavore._ Flannel humblebrag aesthetic mixtape **waistcoat glossier schlitz chartreuse af keffiyeh. Intelligentsia forage art party la croix live-edge marfa godard umami bushwick retro** sartorial enamel pin.
-Thundercats pork belly portland cold-pressed everyday carry migas blue
-
-```javascript 
-<h1>this is my heading one </h1>
-```
-
-bottle swag jean shorts vice cronut bespoke biodiesel distillery hot chicken.
-<div className="code">
-
-```javascript
 import React from 'react';
 import { MDXProvider } from '@mdx-js/react';
 import Highlight, { defaultProps } from 'prism-react-renderer';
+
 /* eslint-disable */
 const component = {
   pre: props => {
@@ -39,7 +18,7 @@ const component = {
         }
       >
         {({ className, style, tokens, getLineProps, getTokenProps }) => (
-          <pre className={className} style={style}>
+          <pre className={className} style={{...style, padding: '20px', lineHeight:'1.5', fontFamily:'Source Code Pro'}}>
             {tokens.map((line, i) => (
               <div {...getLineProps({ line, key: i })}>
                 {line.map((token, key) => (
@@ -56,8 +35,3 @@ const component = {
 export const wrapRootElement = ({ element }) => {
   return <MDXProvider components={component}>{element}</MDXProvider>;
 };
-```
-
-</div>
-
-![Image alt text](./images/image-3.jpeg "tooltip")
