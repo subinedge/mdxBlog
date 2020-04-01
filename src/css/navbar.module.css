@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Russo+One&display=swap');
 
 .navbar {
-  background: rgb(142, 152, 172);
+  background: var(--offWhite);
   /* position: sticky; */
 }
 
