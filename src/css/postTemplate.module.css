@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
 .template {
   width: 90vw;
   margin: 3rem auto;
   max-width: 750px;
   padding: 1.2rem;
   background: var(--mainWhite);
+  
 }
 
 .link {
@@ -44,6 +47,7 @@
   margin-bottom: 1rem;
 }
 .content p {
-  line-height: 1.5;
+  line-height: 30px;
+  color: #3c4856;
   margin-bottom: 1rem;
 }
