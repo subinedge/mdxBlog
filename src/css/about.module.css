@@ -91,3 +91,15 @@
     max-width: 1170px;
   }
 }
+
+@media screen and (max-width: 400px) {
+  .aboutme{
+    padding: 1rem 0;
+    margin-bottom: 0;
+    font-size: 44px;
+}
+
+.about-center {
+  margin-top: 2rem;
+}
+}
