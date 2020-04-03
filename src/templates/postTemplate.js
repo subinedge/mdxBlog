@@ -41,7 +41,7 @@ query getPost($slug:String!){
     frontmatter{
       title
       slug
-      date(formatString:"do MMMM, YYYY")
+      date(formatString:"Do MMMM, YYYY")
       author
       image{
         childImageSharp{
