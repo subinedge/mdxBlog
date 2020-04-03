@@ -6,7 +6,7 @@ import SEO from '../components/SEO'
 
 const getPosts = graphql`
   query {
-    allMdx(sort:{fields:frontmatter___date, order: ASC}){
+    allMdx(sort:{fields:frontmatter___date, order: DESC}){
       edges{
         node{
           excerpt
@@ -15,7 +15,7 @@ const getPosts = graphql`
             title
             slug
             tag
-            date(formatString: "do MMMM, YYYY")
+            date(formatString: "Do MMMM YYYY")
             image{
               childImageSharp{
                 fluid{

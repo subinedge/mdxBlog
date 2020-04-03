@@ -4,7 +4,7 @@ import {FaMediumM, FaTwitter,FaFacebook, FaGithub, FaLinkedinIn} from 'react-ico
 export default [
   {
     icon:<FaMediumM/>,
-    url:'https://www.medium.com/subin'
+    url:'https://medium.com/@subinsamrat96'
   },
 
   {
