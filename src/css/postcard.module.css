@@ -25,8 +25,8 @@
   font-size: 1rem;
 }
 .info p:not(.tag) {
-  font-size: 16px;
-  padding: 20px 0 30px 0;
+  font-size: 14px;
+  padding: 10px 0 10px 0;
   text-align: left;
 }
 
