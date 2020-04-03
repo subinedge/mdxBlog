@@ -11,9 +11,8 @@ const Contact = () => {
         <h3 className={styles.contactme}>Contact Me</h3>
 
         <div className={styles.center}>
-          <form method="post" netlify-honeypot="bot-field" data-netlify="true" className={styles.form}>
+          <form method="POST" action="https://formspree.io/subinsamrat96@gmail.com" className={styles.form}>
             <div>
-            <input type="hidden" name="bot-field" />
             <input type="text" name="name" id="name" className={styles.formControl} placeholder="Name..."/>
           </div>
 
@@ -26,7 +25,7 @@ const Contact = () => {
           </div>
 
           <div>
-            <input type="submit" name="submit" value="Submit here" className={styles.submit}/>
+            <input type="submit" value="Submit here" className={styles.submit}/>
           </div>
           </form>
         </div>
