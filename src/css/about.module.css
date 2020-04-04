@@ -40,9 +40,6 @@
   display: block;
   box-shadow: var(--lightShadow);
 }
-.about-img div {
-  /* box-shadow: var(--lightShadow); */
-}
 .about-info h4 {
   font-size: 1.9rem;
   text-transform: uppercase;

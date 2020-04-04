@@ -12,7 +12,7 @@ const About = () => {
       <div className={styles.aboutCenter}>
         <article className={styles.aboutImg}>
           <div className={styles.imgContainer}>
-            <img src={img} alt="my photo"/>
+            <img src={img} alt="blog admin"/>
           </div>
         </article>
 
