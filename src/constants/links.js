@@ -4,11 +4,6 @@ export default [
     text:'home'
   },
 
-  // {
-  //   path:'/blog',
-  //   text:'blog'
-  // },
-
   {
     path:'/about',
     text:'about'
