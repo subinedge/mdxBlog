@@ -22,6 +22,7 @@ const postTemplate = ({data}) => {
           <h4>
             <span>by {author}</span> / <span>{date}</span>
           </h4>
+          <h5>Portfolio: <a href="https://subinsamrat.online" target="_blank"  rel="noopener noreferrer">https://subinsamrat.online</a></h5>
         </div>
         <Image fluid={img}/>
         <div className={styles.content}>
