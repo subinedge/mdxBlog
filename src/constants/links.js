@@ -6,7 +6,7 @@ export default [
 
   {
     path:'/about',
-    text:'about'
+    text:'Timeline'
   },
 
   {

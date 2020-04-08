@@ -1,102 +1,145 @@
-.aboutme{
-  padding: 4rem 0;
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+.header h1 {
+  margin-bottom: 20px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.header p {
+  width: 70%;
   text-align: center;
-  letter-spacing: 2px;
-  margin-bottom: 0.5rem;
-  text-transform: capitalize;
-  font-size: 48px;
+  font-family: 'Open Sans', sans-serif;
 }
 
-.about-center {
-  width: 80vw !important;
-  margin: 4rem auto;
-}
-/* .about-img {
-  margin: 2rem 0 !important;
-} */
-.about-info h4{
-  margin-top: 3rem;
-  margin-bottom: 1rem;
-}
-
-.about-info h5{
-  margin-top: 1rem;
-  margin-bottom: 2rem;
-  /* letter-spacing: 2px; */
-  text-transform: capitalize;
-  font-size: 22px;
-}
-
-.about-info p {
-  line-height: 1.8;
-  margin-bottom: 2rem;
-}
-.about-img {
+.timeline {
   position: relative;
+  margin: 50px auto;
+  padding: 40px 0;
+  width: 1000px; 
 }
 
-.about-img img {
-  width: 90%;
-  display: block;
-  box-shadow: var(--lightShadow);
+.timeline:before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  background: #c5c5c5;
 }
-.about-info h4 {
-  font-size: 1.9rem;
+
+.timeline ul {
+  margin: 0;
+  padding: 0;
+}
+
+.timeline ul li {
+  line-height: normal;
+  position: relative;
+  width: 50%;
+  padding: 20px 40px;
+  box-sizing: border-box;
+}
+
+.timeline ul li {
+  list-style: none;
+}
+
+.timeline ul li a {
+  text-decoration: none;
+}
+
+.timeline ul li:nth-child(odd) {
+  float: left;
+  text-align: right;
+  clear: both;
+}
+
+.timeline ul li:nth-child(even) {
+  float: right;
+  text-align: left;
+  clear: both;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.content {
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 0 3px rgba(54, 52, 52, 0.2);
+}
+
+.date {
+  font-size: 12px;
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 10px;
+  font-weight: 700;
+  color: #777;
+}
+
+.content p {
+  font-size: 16px;
+  color: rgb(27, 24, 24);
+  font-weight: 600;
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.content a {
+  font-size: 14px;
+  text-decoration: none;
+  font-family: 'Open Sans', sans-serif;
+  color: rgb(27, 24, 24);
+}
+
+.content span {
+  display: inline-block;
+  font-size: 12px;
+  font-family: 'Open Sans', sans-serif;
+  background: #006CFF;
   text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  color: #fff;
+  padding: 2px 5px 2px 5px;
+  border-radius: 2px;
+  font-size: 11px;
 }
 
-@media screen and (min-width: 768px) {
-  .about-center {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 3rem;
-    align-items: center;
-    margin-top: 3rem;
-  }
-
-  .about-img,
-  .about-info {
-    margin: 0;
-  }
-  .about-img img {
-    max-height: 500px;
-  }
-  .img-container {
-    max-height: 500px;
-  }
-  .about-info p {
-    width: 80%;
-  }
-}
-@media screen and (min-width: 992px) {
-  .img-container::before {
-    content: "";
-    position: absolute;
-    width: 90%;
-    height: 100%;
-    border: 3px solid var(--primaryColor);
-    box-sizing: border-box;
-    top: -16px;
-    left: -16px;
-    z-index: -1;
-  }
+.content a:hover {
+  text-decoration: underline;
 }
 
-@media screen and (min-width: 1200px) {
-  .about-center {
-    width: 95vw;
-    max-width: 1170px;
-  }
+.timeline ul li:nth-child(odd):before {
+  content: '';
+  position: absolute;
+  top: 24px;
+  right: -6px;
+  width: 10px;
+  height: 10px;
+  background: rgba(233, 33, 99, 1);
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba(233, 33,99, 0.2);
 }
 
-@media screen and (max-width: 400px) {
-  .aboutme{
-    padding: 1rem 0;
-    margin-bottom: 0;
-    font-size: 44px;
-}
-
-.about-center {
-  margin-top: 2rem;
-}
+.timeline ul li:nth-child(even):before {
+  content: '';
+  position: absolute;
+  top: 24px;
+  left: -4px;
+  width: 10px;
+  height: 10px;
+  background: rgba(233, 33, 99, 1);
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba(233, 33,99, 0.2);
 }
