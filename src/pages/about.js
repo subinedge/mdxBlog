@@ -20,7 +20,7 @@ const About = () => {
                 <h4>February 17 2020</h4>
               </div>
               <span>YOUTUBE</span>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi iste eius fugit iusto delectus necessitatibus quas natus obcaecati provident ullam! Maxime dolores aliquam veritatis sequi voluptates commodi earum nam incidunt.</p>
+              <p>10000 subscribers on YouTube</p>
               <a href="https://www.google.com" aria-label="check out video">Check out the video</a>
             </div>
           </li>
@@ -31,7 +31,7 @@ const About = () => {
                 <h4>February 17 2020</h4>
               </div>
               <span>YOUTUBE</span>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi iste eius fugit iusto delectus necessitatibus quas natus obcaecati provident ullam! Maxime dolores aliquam veritatis sequi voluptates commodi earum nam incidunt.</p>
+              <p>I was finally able to apply for Monetisation - first big goal of 2020</p>
               <a href="https://www.google.com" aria-label="check out video">Check out the video</a>
             </div>
           </li>
@@ -42,7 +42,7 @@ const About = () => {
                 <h4>February 17 2020</h4>
               </div>
               <span>YOUTUBE</span>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi iste eius fugit iusto delectus necessitatibus quas natus obcaecati provident ullam! Maxime dolores aliquam veritatis sequi voluptates commodi earum nam incidunt.</p>
+              <p>New challenge: Conquering freeCodeCamp's Curriculum</p>
               <a href="https://www.google.com" aria-label="check out video">Check out the video</a>
             </div>
           </li>
@@ -53,7 +53,7 @@ const About = () => {
                 <h4>February 17 2020</h4>
               </div>
               <span>YOUTUBE</span>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi iste eius fugit iusto delectus necessitatibus quas natus obcaecati provident ullam! Maxime dolores aliquam veritatis sequi voluptates commodi earum nam incidunt.</p>
+              <p>Awarded Top 100 contributors of 2019 for FreeCodeCamp</p>
               <a href="https://www.google.com" aria-label="check out video">Check out the video</a>
             </div>
           </li>

@@ -113,7 +113,6 @@
   color: #fff;
   padding: 2px 5px 2px 5px;
   border-radius: 2px;
-  font-size: 11px;
 }
 
 .content a:hover {
@@ -142,4 +141,91 @@
   background: rgba(233, 33, 99, 1);
   border-radius: 50%;
   box-shadow: 0 0 0 3px rgba(233, 33,99, 0.2);
+}
+
+@media (max-width:1000px) {
+.content {
+  padding: 10px;
+  }
+
+.timeline {
+  position: relative;
+  margin: 20px auto;
+  padding: 20px 0;
+  width: 700px; 
+}
+}
+
+@media (max-width:730px) {
+/* .content {
+  padding: 10px;
+  } */
+
+.timeline {
+  position: relative;
+  margin: 10px auto;
+  padding: 10px 0;
+  width: 550px; 
+}
+
+.content p {
+  font-size: 14px;
+}
+
+.content a {
+  font-size: 12px;
+}
+}
+
+@media (max-width:550px) {
+  .header h1 {
+  font-size: 22px;
+}
+
+.header p {
+  width: 90%;
+  font-size: 14px;
+}
+
+.timeline {
+  position: relative;
+  margin: 10px auto;
+  padding: 10px 0;
+  width: 400px; 
+}
+
+.content p {
+  font-size: 12px;
+}
+
+.content a {
+  font-size: 10px;
+}
+
+.timeline ul li {
+  width: 50%;
+  padding: 20px 10px;
+}
+}
+
+@media (max-width:400px) {
+
+.header p {
+  width: 100%;
+  font-size: 12px;
+}
+
+.timeline {
+  width: 350px; 
+}
+
+.timeline ul li {
+  width: 50%;
+  padding: 20px 10px;
+}
+
+.content span {
+  font-size: 9px;
+  padding: 2px 5px 2px 5px;
+}
 }
