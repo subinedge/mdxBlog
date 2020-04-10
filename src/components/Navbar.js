@@ -30,7 +30,7 @@ const Navbar = () => {
 
         <div  className={isOpen? `${styles.navLinks} ${styles.showNavSocial}` : `${styles.navLinks}`}>
           {socialIcons.map((item, index)=> {
-            return <a key={index} aria-label="social media icons on navbar" href={item.url} target="_blank" rel="noopener noreferrer">
+            return <a key={index} aria-label="social media icons on navbar" href={item.url} target="_blank" title={item.title} rel="noopener noreferrer">
               {item.icon}
             </a>
           })}
