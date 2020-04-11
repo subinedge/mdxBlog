@@ -1,5 +1,3 @@
-import React from 'react'
-
 export default [
   // {
   //   date:'February 17 2020',
