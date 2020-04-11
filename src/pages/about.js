@@ -1,6 +1,7 @@
 import React from 'react'
 import Layout from '../components/layout'
 import SEO from '../components/SEO'
+import timelineData from '../constants/timeline'
 import styles from '../css/about.module.css'
 
 const About = () => {
@@ -10,53 +11,25 @@ const About = () => {
       <div className={styles.header}>
         <h1>MY ROAD TO GLORY!</h1>
         <p>Below you can see a timeline of my professional accomplishments.</p>
-<p>I hope that this will motivate you to follow your dreams and to write down your own accomplishments along the way!</p>
+        <p>I hope that this will motivate you to follow your dreams and to write down your own accomplishments along the way!</p>
       </div>
       <div className={styles.timeline}>
         <ul>
-          <li>
-            <div className={styles.content}>
-              <div className={styles.date}>
-                <h4>February 17 2020</h4>
-              </div>
-              <span>YOUTUBE</span>
-              <p>10000 subscribers on YouTube</p>
-              <a href="https://www.google.com" aria-label="check out video">Check out the video</a>
-            </div>
-          </li>
 
-          <li>
-            <div className={styles.content}>
-              <div className={styles.date}>
-                <h4>February 17 2020</h4>
+          {timelineData.map((timeline, index)=> {
+            return (
+              <li key={index}>
+                <div className={styles.content}>
+                <div className={styles.date}>
+                  <h4>{timeline.date}</h4>
+                </div>
+                <span>{timeline.tag}</span>
+                <p>{timeline.desc}</p>
+                <a href={timeline.link.externalLink} target="_blank" aria-label={timeline.link.ariaLabel}rel="noopener noreferrer">{timeline.link.linkWords}</a>
               </div>
-              <span>YOUTUBE</span>
-              <p>I was finally able to apply for Monetisation - first big goal of 2020</p>
-              <a href="https://www.google.com" aria-label="check out video">Check out the video</a>
-            </div>
-          </li>
-
-          <li>
-            <div className={styles.content}>
-              <div className={styles.date}>
-                <h4>February 17 2020</h4>
-              </div>
-              <span>YOUTUBE</span>
-              <p>New challenge: Conquering freeCodeCamp's Curriculum</p>
-              <a href="https://www.google.com" aria-label="check out video">Check out the video</a>
-            </div>
-          </li>
-
-          <li>
-            <div className={styles.content}>
-              <div className={styles.date}>
-                <h4>February 17 2020</h4>
-              </div>
-              <span>YOUTUBE</span>
-              <p>Awarded Top 100 contributors of 2019 for FreeCodeCamp</p>
-              <a href="https://www.google.com" aria-label="check out video">Check out the video</a>
-            </div>
-          </li>
+              </li>
+            )
+          })}
           <div className={styles.clearfix}></div>
         </ul>
       </div>
