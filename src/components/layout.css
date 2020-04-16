@@ -12,6 +12,7 @@
   --mainSpacing: 2px;
   --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
   --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
+  --blockquoteColor:#D2F1E4;
 }
 
 * {
@@ -66,7 +67,9 @@ main {
 }
 
 .blockquote {
-  color: red !important;
+  margin-bottom: 1rem;
+  padding: 40px;
+  background-color: var(--blockquoteColor);
 }
 
 .single_agenda {
@@ -76,4 +79,8 @@ main {
   padding: 20px;
   margin-top: 20px;
   line-height: 1.5;
+}
+
+.posts-wrapper {
+  text-align: justify;
 }

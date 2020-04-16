@@ -1,0 +1,101 @@
+---
+title: Yarn vs NPM !!! Which one to choose in 2020
+slug: yarn-vs-npm-speed-tests
+image: ./images/image-1.jpg
+date: 2020-04-02
+author: Subin Sudhakaran
+tag: Package Manager
+---
+
+<div className="posts-wrapper">
+
+Developers are usually caught with a dilemma on which package managers to use, as there are multiple options to go by.The top 2 trusted package managers are NPM and YARN. What problems does the package managers solve and which one to use in 2020 as we are living in a century where speed matters. Let's get started.
+
+# What does package managers do?
+
+Package manager is a program used to install, uninstall and manage the software packages. For example, a react JS library is a software package, bootstrap, sass, gatsby and much more. What package manager do is, it automates the process of installing, upgrading, configuring, and removing software packages in a consistent manner.  
+
+Let's take a look at the state of Node.js package managers and what they can do for you and how fast the same can be delivered! I'll also try to help you to pick one between npm and yarn!
+
+# NPM vs YARN: The wrath of the Titans
+
+You can often hear the debate on why developers choose YARN over its predecessor, is because of its stability. The main reason why developers choose to transition to Yarn is its stability. In the case of npm, when we need to deploy the project on different machines, the versions of installed packages can be different. So there needed a *version locking mechanism* to prevent the system from installing the latest updates rather than the installed version when the code was developed.
+To solve this stability issues and to reduce the number of http requests to the npm registry, yarn was developed by facebook. 
+
+After seeing the yarn's popularity lately, NPM decided to redesign its stability issues and added the ```package-lock.json``` file as same as the ```yarn.lock``` file to strengthen its side.
+
+From the main benefits of Yarn we might put a stress on the following:
+
+<div className="blockquote">
+
+* can install packages from the local cache
+
+* strongly binds package versions
+
+* allows parallel packages installation
+
+* has an active user community
+
+</div>
+
+# Install YARN
+
+NPM is currently now like Internet explorer, which is used for installing YARN.
+
+<div className="code">
+
+```
+npm install yarn
+```
+
+</div>
+
+# YARN Benefits
+
+Yarn has a lot of performance and security improvements under the hood. Let's see what these are!
+
+# Module installation speed
+
+When you install a package using Yarn (using ***```yarn add packagename```***), it places the package on your disk. During the next install, this package will be used instead of sending an HTTP request to get the tarball from the registry.
+
+Your cached module will be put into ***~/.yarn-cache***, and will be prefixed with the registry name, and postfixed with the modules version.
+
+This means that if you install the 4.4.5 version of express with Yarn, it will be put into ***~/.yarn-cache/npm-express-4.4.5***.
+
+# Parallel Installation
+
+Whenever npm or Yarn needs to install a package, it carries out a series of tasks. In npm, these tasks are executed per package and sequentially, meaning it will wait for a package to be fully installed before moving on to the next. Yarn executes these tasks in parallel, increasing performance.
+
+For comparison, I installed the express package using both npm and Yarn without a shrinkwrap/lock file and with a clean cache. This installs 42 packages in total.
+
+* npm: 9 seconds
+
+* Yarn: 1.37 seconds
+
+I couldn’t believe my eyes. Repeating the steps yielded similar results. I then installed the gulp package, resulting in 195 dependencies.
+
+* npm: 11 seconds
+
+* Yarn: 7.81 seconds
+
+It seems the difference closely depends on the amount of packages that are being installed. Either way, Yarn is consistently faster.
+
+# Manually add dependencies
+
+If you want to manually generate a yarn.lock file based on dependencies defined in ```package.json```, you can use the ```yarn generate-lock-entry``` command. It’s basically the same as ```npm shrinkwrap```, but it should be used carefully since the yarn.lock file gets rewritten automatically every time you add or upgrade dependencies with ```yarn add``` or ```yarn upgrade```.
+
+# Okay Positives aside, what are the drawbacks
+
+Yarn has been developed just recently. Here are 2 main issues which appeared while I was transferring my project from NPM to Yarn:
+
+* Problems with installing native modules
+
+* Yarn doesn’t work with any node.js version older than 5
+
+# Conclusion
+
+Yarn advantages over npm fully compensate for all its defects. Yarn allows deploying projects with more comfort and convenience. In addition, it helps to avoid these unpleasant moments, which occur while using npm.
+
+On the contrary to npm, Yarn offers stability, providing lock down versions of installed packages. The speed of modules installing is higher. It is very important for big projects, which have more dependencies. To sum up, I’d say that Yarn is a great alternative to npm.
+
+</div>
