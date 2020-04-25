@@ -6,7 +6,7 @@ const PostList = ({posts}) => {
   return (
     <section className={styles.posts}>
       <h1>Cookbook for FrontEnd Devs</h1>
-      <h4>Always bet on JavaScript</h4>
+      <h4>Everything related to JavaScript will be discussed here</h4>
       {/* <h4>Once you stop learning you start dying</h4> */}
 
       {/* newsletter */}
