@@ -18,7 +18,7 @@
 .center {
   width: 85vw;
   margin: 0 auto;
-  max-width: 750px;
+  max-width: 800px;
 }
 
 @media screen and (max-width: 575px) {

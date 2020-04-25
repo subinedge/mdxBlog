@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Russo+One&display=swap');
 
 .navbar {
-  background: var(--offWhite);
-  /* position: sticky; */
+  background:#fff;
+  box-shadow: 0 2px 3px 1px rgb(216, 216, 216);
 }
 
 .logo-link {
@@ -67,7 +67,7 @@
   color: var(--mainBlack);
   /* transition: var(--mainTransition); */
   font-weight: bold;
-  letter-spacing: 2px
+  letter-spacing: 1px;
 }
 .nav-links a:hover {
   color: var(--primaryColor);

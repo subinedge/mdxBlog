@@ -1,7 +1,14 @@
 .card {
   margin-bottom: 2rem;
-  background: var(--offWhite);
+  /* background: var(--offWhite); */
+  background: #fff;
   padding: 1rem;
+  transition: all 0.3s ease;
+  /* box-shadow: 1px 1px 1px 1px rgb(216, 216, 216); */
+}
+
+.card:hover {
+  box-shadow: 3px 3px 3px 4px rgb(216, 216, 216);
 }
 .info {
   padding: 1rem 0;
@@ -39,7 +46,7 @@
   font-size: 11px;
   text-transform: uppercase;
 }
-.link {
+/* .link {
   border: 1px solid var(--mainBlack);
   padding: 4px 8px;
   display: inline-block;
@@ -52,10 +59,10 @@
 .link:hover {
   background: var(--mainBlack);
   color: var(--mainWhite);
-}
+} */
 
 .image > div {
-  height: 250px;
+  height: 200px;
 }
 @media screen and (min-width: 776px) {
   .card {
@@ -68,7 +75,7 @@
     padding: 0 1.5rem;
   }
   .image > div {
-    height: 250px;
+    height: 200px;
   }
 }
 
