@@ -70,7 +70,7 @@
   letter-spacing: 1px;
 }
 .nav-links a:hover {
-  color: var(--primaryColor);
+  color: #006CFF;
 }
 .nav-social-links {
   display: none;

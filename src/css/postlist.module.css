@@ -8,7 +8,7 @@
   text-transform: capitalize;
   font-size: 48px;
 }
-.posts h4 {
+.posts h4, .newsletter {
   /* letter-spacing: 2px; */
   text-transform: capitalize;
   font-size: 15px;
@@ -21,9 +21,80 @@
   max-width: 800px;
 }
 
+.newsletter {
+  margin: 3rem auto;
+  padding: 2rem;
+  width: 80vw;
+  max-width: 800px;
+  background-color: #006CFF;
+  color: #fff;
+  /* background-color: var(--offWhite); */
+}
+
+.newsletter h4 {
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.form {
+  width: 500px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* grid-template-columns: 1fr 200px; */
+  grid-gap: 16px;
+}
+
+.form input[type="email"] {
+  border-radius: 3px;
+  padding: 0.6rem 1rem;
+  border: none;
+}
+
+.form input[type="email"]:focus {
+  outline: none;
+}
+
+.form input[type="submit"] {
+  padding: 0;
+  border: 2px solid #fff;
+  font-size: 15px;
+  background: none;
+  cursor: pointer;
+  color: #fff;
+}
+
 @media screen and (max-width: 575px) {
   .posts h1 {
     font-size: 40px;
+  }
+
+  .form {
+    width: 350px;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .form input[type="submit"] {
+    padding: 0.5rem 1rem;
+  }
+}
+
+
+@media screen and (max-width: 450px) {
+  .form {
+    width: 270px;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+
+@media screen and (max-width: 375px) {
+  .form {
+    width: 200px;
+    display: grid;
+    grid-template-columns: 1fr;
   }
 }
 
