@@ -7,7 +7,7 @@
   padding: 1rem 0;
 }
 .info h2 {
-  font-size: 30px;
+  font-size: 26px;
   text-transform: capitalize;
   margin-bottom: 10px;
 }
@@ -21,9 +21,6 @@
   color: var(--mainBlack);
 }
 
-.info .dot {
-  font-size: 1rem;
-}
 .info p:not(.tag) {
   font-size: 14px;
   padding: 10px 0 10px 0;

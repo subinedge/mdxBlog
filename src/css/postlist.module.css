@@ -11,7 +11,7 @@
 .posts h4 {
   /* letter-spacing: 2px; */
   text-transform: capitalize;
-  font-size: 14px;
+  font-size: 15px;
   text-align: center;
   margin-bottom: 3rem;
 }
@@ -24,5 +24,22 @@
 @media screen and (max-width: 575px) {
   .posts h1 {
     font-size: 40px;
+  }
+}
+
+
+@media screen and (min-width: 1575px) {
+
+  .posts h1 {
+    font-size: 60px;
+  }
+
+   .posts h4 {
+    font-size: 30px;
+  }
+
+  .center {
+  width: 85vw;
+  max-width: 60vw;
   }
 }

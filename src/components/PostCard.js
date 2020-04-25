@@ -23,7 +23,7 @@ const PostCard = ({post}) => {
             <h2>{title}</h2>
           </AniLink>
           <h6>
-            <span>{date}</span> <span className={styles.dot}>&#183;</span><span className={styles.dot}>&#183;</span><span className={styles.dot}>&#183;</span> <span>{timeToRead} min read</span>
+            <span>{date}</span> | <span>{timeToRead} min read</span>
           </h6>
           <p className={styles.tag}>{tag}</p>
           <p>{excerpt}</p>
