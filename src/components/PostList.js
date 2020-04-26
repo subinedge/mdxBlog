@@ -11,15 +11,15 @@ const PostList = ({posts}) => {
 
       {/* newsletter */}
 
-      <div className={styles.newsletter}>
-        <h4>Get latest updates</h4>
+      {/* <div className={styles.newsletter}>
+        <h4>Get latest updates</h4> */}
         {/* <h3>Join the list ! Understand JavaScript concepts</h3> */}
 
-        <form className={styles.form}>
+        {/* <form className={styles.form}>
           <input type="email" required placeholder="Enter your email address"/>
           <input type="submit" value="Subscribe"/>
         </form>
-      </div>
+      </div> */}
 
       <div className={styles.center}>
         {posts.map(({node}, index)=> {

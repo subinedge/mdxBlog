@@ -84,3 +84,8 @@ main {
 .posts-wrapper {
   text-align: justify;
 }
+
+.gif-responsive {
+  width: 80%;
+  height: auto;
+}

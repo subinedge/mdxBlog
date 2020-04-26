@@ -10,16 +10,16 @@ export default [
   //   },
   // },
 
-  // {
-  //   date:'February 20 2020',
-  //   tag:'BLOG',
-  //   desc:'I was finally able to apply for Monetisation - first big goal of 2020',
-  //   link:{
-  //     linkWords:'Check out the channel',
-  //     ariaLabel:'Check out channel',
-  //     externalLink:'https://www.google.com',
-  //   },
-  // },
+  {
+    date:'April 23 2020',
+    tag:'PRESENTATION',
+    desc:'I presented a session on Progressive web app to my colleagues through Microsoft Teams',
+    link:{
+      linkWords:'Check out the article',
+      ariaLabel:'pwa presentation blog',
+      externalLink:'https://javascriptwillrule.netlify.com/should-you-implement-pwa-in-your-website',
+    },
+  },
 
   {
     date:'April 10 2020',
