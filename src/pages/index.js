@@ -36,7 +36,7 @@ export default () => {
   
   return(
     <Layout>
-      <SEO title="Blog | JS will rule" description="JavaScript will Rule Blog Page"/>
+      <SEO title="Blog | JavaScriptWillRule" description="JavaScript will Rule Blog Page"/>
       <PostList posts={posts}/>
     </Layout>
   )

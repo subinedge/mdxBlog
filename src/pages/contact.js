@@ -6,7 +6,7 @@ import styles from '../css/contact.module.css'
 const Contact = () => {
   return (
     <Layout>
-      <SEO title="Contact | JS will rule" description="JavaScript will Rule Contact Page"/>
+      <SEO title="Contact | JavaScriptWillRule" description="JavaScript will Rule Contact Page"/>
       <section className={styles.contact}>
         <h3 className={styles.contactme}>Contact Me</h3>
 
