@@ -13,15 +13,15 @@ const Contact = () => {
         <div className={styles.center}>
           <form method="POST" action="https://formspree.io/subinsamrat96@gmail.com" className={styles.form}>
             <div>
-            <input type="text" name="name" id="name" className={styles.formControl} placeholder="Name..."/>
+            <input type="text" name="name" id="name" className={styles.formControl} placeholder="Name..." required/>
           </div>
 
           <div>
-            <input type="email" name="email" id="email" className={styles.formControl} placeholder="Email..."/>
+            <input type="email" name="email" id="email" className={styles.formControl} placeholder="Email..." required/>
           </div>
 
           <div>
-            <textarea name="message" rows="10" id="message" className={styles.formControl} placeholder="Message..."/>
+            <textarea name="message" rows="10" id="message" className={styles.formControl} placeholder="Message..." required/>
           </div>
 
           <div>
