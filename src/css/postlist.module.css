@@ -9,9 +9,9 @@
   font-size: 48px;
 }
 .posts h4, .newsletter {
-  /* letter-spacing: 2px; */
+  letter-spacing: 2px;
   text-transform: capitalize;
-  font-size: 15px;
+  font-size: 18px;
   text-align: center;
   margin-bottom: 3rem;
 }
