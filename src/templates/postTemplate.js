@@ -16,13 +16,13 @@ const postTemplate = ({data}) => {
     <Layout>
       <SEO title={title} description={title}/>
       <section className={styles.template}>
-        <AniLink fade to='/' aria-label="back to all blog posts" className={styles.link}>Back to all posts</AniLink>
+        <AniLink fade to='/' aria-label="all blog posts link" className={styles.link}>Back to all posts</AniLink>
         <div className={styles.info}>
           <h1>{title}</h1>
           <h4>
             <span>by {author}</span> / <span>{date}</span>
           </h4>
-          <h5>Portfolio: <a href="https://subinsamrat.online" target="_blank"  rel="noopener noreferrer">https://subinsamrat.online</a></h5>
+          <h5>Portfolio: <a href="https://subinsamrat.online" aria-label="portfolio link" target="_blank"  rel="noopener noreferrer">https://subinsamrat.online</a></h5>
         </div>
         <Image fluid={img}/>
         <div className={styles.content}>
