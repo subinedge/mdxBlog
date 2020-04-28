@@ -4,7 +4,7 @@ import {FaMediumM, FaTwitter,FaProductHunt, FaGithub, FaLinkedinIn} from 'react-
 export default [
   {
     icon:<FaMediumM/>,
-    url:'https://medium.com/@subinsamrat96',
+    url:'https://medium.com/@javascriptwillrule',
     title:'Medium'
   },
 
