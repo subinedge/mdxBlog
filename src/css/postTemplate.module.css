@@ -4,7 +4,6 @@
   max-width: 750px;
   padding: 1.2rem;
   background: var(--mainWhite);
-  
 }
 
 .link {
@@ -55,6 +54,32 @@
   color: #3c4856;
   font-weight: 600;
   margin-bottom: 1rem;
+}
+
+@media (min-width:2000px) {
+
+  .link {
+    padding: 8px 12px;
+    font-size: 18px;
+}
+
+  .info h4 {
+    letter-spacing: 3px;
+    font-size: 18px;
+  }
+  
+  .info h5 {
+    font-size: 24px;
+  }
+
+  .content p {
+    font-size: 25px;
+    line-height: 35px;
+  }
+
+  .content a {
+    font-size: 25px;
+  }
 }
 
 @media (min-width:1240px) {
