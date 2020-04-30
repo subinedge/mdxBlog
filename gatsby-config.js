@@ -1,11 +1,11 @@
 module.exports = {
   siteMetadata:{
     title:'JavaScript will Rule',
-    description:'Learn through projects',
+    description:'Front End Development made easy',
     author:'Subin Sudhakaran',
     twitterUsername:'@cyber_punk09',
     image:'/image-1.jpeg',
-    siteUrl:'https://javascriptwillrule.netlify.com'
+    siteUrl:'https://javascriptwillrule.com'
   },
    plugins: [
     {
