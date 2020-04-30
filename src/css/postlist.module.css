@@ -21,14 +21,14 @@
   max-width: 800px;
 }
 
-.newsletter {
+/* .newsletter {
   margin: 3rem auto;
   padding: 2rem;
   width: 80vw;
   max-width: 800px;
   background-color: #006CFF;
   color: #fff;
-  /* background-color: var(--offWhite); */
+  background-color: var(--offWhite);
 }
 
 .newsletter h4 {
@@ -41,7 +41,7 @@
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  /* grid-template-columns: 1fr 200px; */
+  grid-template-columns: 1fr 200px;
   grid-gap: 16px;
 }
 
@@ -62,13 +62,13 @@
   background: none;
   cursor: pointer;
   color: #fff;
-}
+} */
 
 @media screen and (max-width: 575px) {
   .posts h1 {
     font-size: 40px;
   }
-
+/* 
   .form {
     width: 350px;
     display: grid;
@@ -77,29 +77,29 @@
 
   .form input[type="submit"] {
     padding: 0.5rem 1rem;
-  }
+  } */
 }
 
-
+/* 
 @media screen and (max-width: 450px) {
   .form {
     width: 270px;
     display: grid;
     grid-template-columns: 1fr;
   }
-}
+} */
 
-
+/* 
 @media screen and (max-width: 375px) {
   .form {
     width: 200px;
     display: grid;
     grid-template-columns: 1fr;
   }
-}
+} */
 
 
-@media screen and (min-width: 1575px) {
+@media screen and (min-width: 1400px) {
 
   .posts h1 {
     font-size: 60px;
@@ -110,7 +110,23 @@
   }
 
   .center {
-  width: 85vw;
-  max-width: 60vw;
+    width: 85vw;
+    max-width: 60vw;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+
+  .posts h1 {
+    font-size: 80px;
+  }
+
+   .posts h4 {
+    font-size: 40px;
+  }
+
+  .center {
+    width: 85vw;
+    max-width: 50vw;
   }
 }

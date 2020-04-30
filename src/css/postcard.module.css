@@ -1,10 +1,8 @@
 .card {
   margin-bottom: 2rem;
-  /* background: var(--offWhite); */
   background: #fff;
   padding: 1rem;
   transition: all 0.3s ease;
-  /* box-shadow: 1px 1px 1px 1px rgb(216, 216, 216); */
 }
 
 .card:hover {
@@ -13,6 +11,7 @@
 .info {
   padding: 1rem 0;
 }
+
 .info h2 {
   font-size: 26px;
   text-transform: capitalize;
@@ -83,6 +82,32 @@
 
 @media screen and (max-width:400px) {
   .info h2 {
-  font-size: 24px;
+    font-size: 24px;
+  }
+}
+
+
+@media screen and (min-width:2000px) {
+ .card {
+  margin-bottom: 2.5rem;
+  }
+
+  .info h2 {
+  font-size: 30px;
+  }
+
+  .info h6 {
+  font-size: 18px;
+  }
+
+  .info .tag {
+  padding: 5px 8px 5px 8px;
+  margin-top: 15px;
+  font-size: 16px;
+  }
+
+  .info p:not(.tag) {
+  font-size: 20px;
+  padding: 10px 0 10px 0;
   }
 }
