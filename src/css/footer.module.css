@@ -39,3 +39,18 @@
 .footer-logo {
   color: var(--primaryColor);
 }
+
+
+@media (min-width:2000px) {
+  .links a {
+  font-size: 20px;
+  }
+
+  .icons a {
+  font-size: 1.8rem;
+  }
+
+  .copyright {
+    font-size: 24px;
+  }
+}
