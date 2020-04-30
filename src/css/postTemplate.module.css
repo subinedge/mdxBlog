@@ -28,7 +28,7 @@
   letter-spacing: 5px;
   margin-bottom: 0.5rem;
   text-transform: capitalize;
-  font-size: 48px;
+  font-size: 40px;
 }
 .info h4 {
   letter-spacing: 5px;
@@ -57,9 +57,16 @@
   margin-bottom: 1rem;
 }
 
+@media (min-width:1240px) {
+  .template {
+    width: 90vw;
+    max-width: 70vw;
+  }
+}
+
 @media (max-width:540px) {
   .info h1 {
-    font-size: 40px;
+    font-size: 30px;
   }
 }
 
