@@ -18,7 +18,7 @@ const Navbar = () => {
             <h2 className={styles.logoHeader}><span className={styles.logoCustom}>JavaScript</span><span className={styles.logoSecondary}> will rule</span></h2>
           </AniLink>
           <button type="button" aria-label="mobile nav hamburger icon" className={styles.logoBtn} onClick={toggleNav}>
-            <FaAlignRight className={styles.logoIcon}/>
+            <FaAlignRight className={styles.toggleIcon}/>
           </button>
         </div>
 

@@ -24,7 +24,7 @@
 .logo-btn:hover {
   cursor: pointer;
 }
-.logo-icon {
+.toggle-icon {
   color: var(--mainBlack);
   font-size: 1.5rem;
 }
@@ -75,6 +75,22 @@
 .nav-social-links {
   display: none;
 }
+
+@media screen and (min-width: 2000px) {
+
+  .logo-header {
+    font-size: 30px;
+  }
+
+  .nav-header {
+    padding: 2rem 1.25rem;
+  }
+
+  .nav-links a {
+    font-size: 25px;
+  }
+}
+
 
 @media screen and (max-width: 575px) {
   .navbar {
