@@ -56,6 +56,10 @@
   margin-bottom: 1rem;
 }
 
+.content a {
+  font-size: 20px;
+}
+
 @media (min-width:2000px) {
 
   .link {
