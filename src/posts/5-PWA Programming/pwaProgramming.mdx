@@ -368,5 +368,88 @@ self.addEventListener('activate', ()=> {
 ```
 _self_ represents service worker object itself.
 
+Now the we have installed and activated the service worker. The next part is about pre-caching the assets. The pre-caching means files that you know that will not change often and always want the user to access them. And the best place for that is in the _install_ event, pre-caching static assets.
+
+This static assets caching can be done by accessing the special Web API which allows us to access the cache, not the default browser cache.
+
+In sw.js:
+
+```javascript
+
+const staticAssets = [
+  './',
+  './index.html',
+  './styles.css',
+  './news.js'
+];
+
+self.addEventListener('install', async event => {
+  const cache = await caches.open('news-assets');
+  cache.addAll('staticAssets');
+});
+```
+
+In the above code, what we have done is, we have listed out the static assets that have to be cached. And we create new cache memory and use _addAll_ method to add the static assets to it.
+
+Now if you navigate to Developer Tools -> Application -> Cache Storage. Your newly created cache will be listed out with all the static assets listed. But now if you try to load your webpage with Offline mode, it won't work because we have to fetch the static assets and process. The service worker is a low level API, we have to command it to do it. 
+
+Let's add a fetch event.
+
+```javascript
+  self.addEventListener('fetch', event => {
+    const req = event.request;
+    event.respondWith(cacheFirst(req));
+  });
+```
+
+Fetch event is the event which will be sent from our application to the network. First we will get the request by _event.reqest_ and respond it with cache assets first, which is a function.
+
+```javascript
+  async function cacheFirst(req) {
+    const cachedResponse = await caches.match(req);
+    return cachedResponse || fetch(req);
+  }
+```
+
+cacheFirst function matches the request and return the response and specific response is not there, then the FETCH API will trigger request to network.
+
+Now if you view in Offline mode, the header section will only be displayed. We have successfully cached the static files. 
+Now we will cache the news articles also, if suppose there is no network we will post the last cached news articles to the webpage.
+
+```javascript
+  self.addEventListener('fetch', event => {
+    const req = event.request;
+    const url = new URL(req.url);
+
+    if(url.origin === location.origin) {
+      event.respondWith(cacheFirst(req));
+    }else {
+      event.respondWith(networkFirst(req));
+    }
+    
+  });
+```
+
+Here we are checking if the URL is equal to the fetching location, if cache then fetch from it or else fetch from network.
+
+```javascript
+  async function networkFirst(req) {
+    const cache = await caches.open('news-articles');
+
+    try {
+      const res = await fetch(req);
+      cache.put(req, res.clone());
+      return res;
+    } catch(error) {
+      return await cache.match(req);
+    }
+  }
+```
+
+Here we are creating new seperate cache for news articles to get stored. First in try block, we are trying to fetch the request from the network. If that worked, we have to store the response in cache (news articles) so that we can have fallback.
+
+We are going to save the article by PUT method with key and value pair as request and the response. We are cloning the actual result here. Then returning the response. If that fails (no network), we are going to cache and match the request and return the result in the cache.
+
+Now the articles will get stored sucessfully. We have implemented the service worker functionality in our web application.
 
 </div>
