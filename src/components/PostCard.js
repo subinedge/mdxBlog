@@ -11,7 +11,7 @@ const PostCard = ({post}) => {
   
   return (
     <article className={styles.card}>
-      <AniLink to={slug} fade>
+      <AniLink to={slug} aria-label="blog links" fade>
         <div className={styles.image}>
           <Image fluid={img}/>
         </div>
