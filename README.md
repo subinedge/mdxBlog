@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="subinsamrat.online">
+  <a href="https://javascriptwillrule.com" target="_blank">
     <img alt="BlogLogo" src="./src/images/logo2.png"/>
   </a>
 </p>
