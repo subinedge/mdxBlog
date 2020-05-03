@@ -89,3 +89,27 @@ main {
   width: 80%;
   height: auto;
 }
+
+.previous-post {
+  font-weight: bold;
+}
+
+.post-recommendation {
+  width: 80%;
+  font-family: 'Montserrat', sans-serif;
+  background-color: rgb(225, 230, 235);
+  padding: 2rem;
+  margin-bottom: 1rem;
+}
+
+.post-recommendation a {
+  color: rgb(52, 52, 53);
+  font-size: 1.2rem;
+}
+
+@media (max-width:700px) {
+  .post-recommendation {
+  width: 100%;
+  text-align: left;
+  }
+}
