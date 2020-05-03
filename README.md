@@ -1,6 +1,6 @@
 <p align="center">
   <a href="subinsamrat.online">
-    <img alt="BlogLogo" src="./src/images/logo.png"/>
+    <img alt="BlogLogo" src="./src/images/logo2.png"/>
   </a>
 </p>
 <h1 align="center">
