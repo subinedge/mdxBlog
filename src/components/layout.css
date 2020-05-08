@@ -68,7 +68,7 @@ main {
 
 .blockquote {
   margin-bottom: 1rem;
-  padding: 40px;
+  padding: 30px;
   background-color: var(--blockquoteColor);
 }
 
