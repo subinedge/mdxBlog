@@ -9,7 +9,8 @@ tag: CSS
 
 <div className="posts-wrapper">
 
-In this posts, we will look into CSS Units where we will be learning when and where to use _em, px, rem and %_.
+Welcome to my second posts on CSS units in CSS playlists section.
+In this posts, we will look into CSS measurement units where we will be learning where, when and how to use _em, px, rem and %_.
 
 ### Definition:
 <br/>
@@ -176,8 +177,178 @@ div {
 ```
 <br/>
 
-However, if you want to change the font-size of all the elements (in our case there is only one div), then we will be writing media queries for each and every element and changing its font sizes to say, 2rem. 
+However, if you want to change the font-size of all the elements (in our case there is only one div), then we will be writing media queries for each and every element and changing its font sizes to say, 1.5rem. 
 
-Rather the easiest approach is one to change the html base font size to 2rem. That's all. Everything will be as good as you wrote 20 lines of CSS media queries to make it better.
+Rather the easiest approach is one to change the html base font size to 1.5rem. That's all. Instead of writing 20 lines of mediaqueries for all elements, rem would make your life easier.
+
+```css
+html {
+  font-size: 1rem;
+}
+
+div {
+  background-color: brown;
+  font-size: 2rem;
+  width: 600px;
+}
+
+@media (max-width:480px) {
+  html {
+    font-size:1.5rem;
+  }
+}
+```
+
+<br/>
+
+For the above code in device less than 480px wide, the font size for the _div_ block would be _1.5rem = 1.5 * 16px = 24px_.
+<br/>
+
+
+## em
+<br/>
+
+Using ems as a length unit in layout, and in particular in padding and margins can help to maintain a vertical rhythm. If a user resizes their text or you decide to make font sizes larger or smaller in your stylesheet, the em length unit will scale proportionately. In this example I am using ems for the padding on the box. The padding remains in proportion as I resize the font.
+
+When em units are declared on child elements that don’t have a _font-size_ defined, they will inherit their _font-size_ from their parent, or from another ancestor element.
+
+<div className="blockquote">
+
+Use em when you specifically want the size of something to depend on the current font size.
+
+</div>
+
+Below example will make you clear on usage of em:
+
+```html
+<div class="parent">
+  <div class="em">
+  </div>
+</div>
+```
+<br/>
+
+```css
+html {
+  font-size:16px;
+}
+
+.parent {
+  font-size:20px;
+}
+
+.em {
+  background-color:brown;
+  width:2em;
+  height:2em;
+}
+```
+<br/>
+
+As you can see from the image below, the root font-size is taken from its parent and not from the _html_ root element like rem.
+
+<br/>
+
+![em-example snippet](./images/em-example.PNG)
+
+<br/>
+
+One interesting thing about _em_ is that they cascade. See the below example to understand it better.
+
+```html
+<div class="parent">
+  <div class="em">2em
+    <div class="em">2em
+      <div class="em">2em
+
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+<br/>
+
+Same CSS , but to get the difference we will add the font-size property.
+<br/>
+
+```css
+.parent {
+  font-size: 20px;
+}
+
+.em {
+  background-color: brown;
+  width: 2em;
+  height: 2em;
+  font-size:2em;
+}
+```
+
+<br/>
+
+![em-example-snippet-2](./images/em-example-2.PNG)
+
+<br/>
+
+This is called cascading feature that comes with _em_. Okay, let's break down the font-size of all 3 _em_ classes.
+
+### First em:
+
+font-size declared = 2em, parent font-size is 20px declared (in CSS). So 2 * 20px = 40px.
+
+### Second em:
+
+font-size declared = 2em, parent font-size is 40px (got from first em). So 2 * 40px = 80px.
+
+### Third em:
+
+font-size declared = 2em, parent font-size is 80px (got from second em). So 2 * 80px = 160px.
+
+If you do this same thing to rem, it won't cascade, because it takes the parent font values from _html_ root element. Why just say, let's see that too in action.
+
+```html
+<div class="parent">
+  <div class="rem">2rem
+    <div class="rem">2rem
+      <div class="rem">2rem
+
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+<br/>
+
+```css
+.parent {
+  font-size: 20px;
+}
+
+.rem {
+  background-color: brown;
+  width: 2rem;
+  height: 2rem;
+  font-size:2rem;
+}
+```
+
+<br/>
+
+![rem-exmaple-code-snippet](./images/rem-example.PNG)
+
+<br/>
+
+As you see in _rem_ there is no cascading involved. Both relative units has there own advantages and disadvantages. Please make sure you are using it wisely.
+
+Hope i tried to break those intriguing parts simply for you guys. Let me know if you have any doubts.
+
+<div className="blockquote">
+
+Post your doubts in _subinsamrat96@gmail.com_. I will be there for you guys, always.
+Thank you.
+
+</div>
 
 </div>
