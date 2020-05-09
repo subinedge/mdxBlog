@@ -1,14 +1,14 @@
 export default [
-  // {
-  //   date:'February 17 2020',
-  //   tag:'YOUTUBE',
-  //   desc:'10000 subscribers on YouTube',
-  //   link:{
-  //     linkWords:'Check out the video',
-  //     ariaLabel:'Check out video',
-  //     externalLink:'https://www.google.com',
-  //   },
-  // },
+  {
+    date:'May 05 2020',
+    tag:'BLOG',
+    desc:'Started my CSS playlists on decoding confused/tricky terms for web developers',
+    link:{
+      linkWords:'Check out my first post',
+      ariaLabel:'Check out first post',
+      externalLink:'https://www.javascriptwillrule.com/css-positioning-explained-by-building-project',
+    },
+  },
 
   {
     date:'April 23 2020',

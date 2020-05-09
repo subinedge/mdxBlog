@@ -29,8 +29,17 @@ const postTemplate = ({data}) => {
           <MDXRenderer>
             {body}
           </MDXRenderer>
+
+         
         </div>
-      </section>
+
+         <div className="blockquote">
+
+            Post your doubts in <a href="mailto:subinsamrat96@gmail.com"><em><u>subinsamrat96@gmail.com</u></em></a>. I will be there for you guys, always.
+            Thank you.
+
+          </div>
+      </section>  
     </Layout>
   )
 }
