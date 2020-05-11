@@ -18,7 +18,7 @@ const component = {
         }
       >
         {({ className, style, tokens, getLineProps, getTokenProps }) => (
-          <pre className={className} style={{...style, padding: '20px', lineHeight:'1.5', fontFamily:'Source Code Pro'}}>
+          <pre className={className} style={{...style, padding: '10px 20px 0 20px', lineHeight:'1.5', fontFamily:'Source Code Pro'}}>
             {tokens.map((line, i) => (
               <div {...getLineProps({ line, key: i })}>
                 {line.map((token, key) => (
