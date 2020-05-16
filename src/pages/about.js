@@ -7,7 +7,7 @@ import styles from '../css/about.module.css'
 const About = () => {
   return (
     <Layout>
-      <SEO title="Timeline | JavaScriptWillRule" description="JavaScript will Rule About Page"/>
+      <SEO title="Timeline | JavaScriptWillRule" description="The official JavaScript will rule blog by Subin Sudhakaran. Detailed understanding of front end development blog posts"/>
       <div className={styles.header}>
         <h1>MY ROAD TO GLORY!</h1>
         <p>Below you can see a timeline of my professional accomplishments.</p>

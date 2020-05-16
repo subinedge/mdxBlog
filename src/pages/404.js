@@ -7,7 +7,7 @@ import {Link} from 'gatsby'
 const Error = () => {
   return (
     <Layout>
-      <SEO title="Page Not found | JavaScriptWillRule" description="JavaScript will Rule Error Page"/>
+      <SEO title="Page Not found | JavaScriptWillRule" description="The official JavaScript will rule blog by Subin Sudhakaran. Detailed understanding of front end development blog posts"/>
       <div className={styles.container}>
       <h1>404 - Page not found</h1>
         <h3>Oops ! You never know what content was in here, I removed it.</h3>
