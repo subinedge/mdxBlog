@@ -1,5 +1,16 @@
 export default [
   {
+    date:'June 06 2020',
+    tag:'VIRUS',
+    desc:'3 months since Coronavirus spread and still the total cases are increasing exponentially in India',
+    link:{
+      linkWords:'Coronavirus in India',
+      ariaLabel:'check out the total cases in India',
+      externalLink:'https://www.worldometers.info/coronavirus/country/india/',
+    },
+  },
+
+  {
     date:'May 05 2020',
     tag:'BLOG',
     desc:'Started my CSS playlists on decoding confused/tricky terms for web developers',
