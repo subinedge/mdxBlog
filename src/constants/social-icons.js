@@ -16,7 +16,7 @@ export default [
 
   {
     icon:<FaProductHunt/>,
-    url:'https://subinsamrat.online',
+    url:'https://subinsamrat.netlify.com/',
     title:'Portfolio'
   },
 
