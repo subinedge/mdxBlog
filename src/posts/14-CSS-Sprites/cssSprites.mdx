@@ -1,0 +1,122 @@
+---
+title: CSS Sprites - How Sprites contribute for site performance
+slug: css-sprites-contribution-to-site-performance
+image: ./images/image-2.jpg
+date: 2020-06-06
+author: Subin Sudhakaran
+tag: CSS
+---
+
+<div className="posts-wrapper">
+
+  CSS Sprites are a technique that allow us to make our website faster, since speed is one of the most important part of website development.
+
+  Many developers like to use CSS sprites because it saves on request time -- the browser makes one request, downloads the image, and all the various sprites are now automatically cached and blazing fast.
+
+  With that hype in the mind, why not anyone talking much about CSS Sprites. We will be discussing on how it can be implemented effectively and also what are the limitations that sprites bring to us.
+
+  # What are CSS Sprites ?
+
+  CSS sprite is an image containing several images arranged in a specific/desired order, so that by using the background-position property you can display the desired image by its “coordinates”. This will be extremely beneficial because they allow you to load multiple images with just one HTTP request which can significantly improve page loading speed.
+
+  # Do I need to know image editing softwares for generating Sprites ?
+
+  Nope. There are many online sprite generators available. I am using [Toptal Sprite Generator](https://www.toptal.com/developers/css/sprite-generator/) which has a simple user interface with options of generating sprite images vertically/horizontally/diagonally, also one can provide padding between the images. And the awesome part is, it generates CSS code with width of the image and its background positioning values.
+
+  # Demo on CSS Sprites
+
+  #### In index.html:
+
+  <br/>
+
+  I found the below sprite online, in which we are going perform the animation.
+
+  ![sprite-animation-example](./images/sprite-1.PNG)
+
+  <br/>
+
+  ```html
+  <img src="http://s.cdpn.io/79/sprite-steps.png" />
+  <div class="sprite"></div>
+  ```
+
+  <br/>
+
+  #### In styles.css:
+
+  <br/>
+
+  ```css
+  .sprite {
+    width: 50px;
+    height: 72px;
+    background-image: url("http://s.cdpn.io/79/sprite-steps.png");
+
+    {/* cross browser compatible animation property */}
+
+    -webkit-animation: play .8s steps(10) infinite;
+    -moz-animation: play .8s steps(10) infinite;
+    -ms-animation: play .8s steps(10) infinite;
+    -o-animation: play .8s steps(10) infinite;
+    animation: play .8s steps(10) infinite;
+  }
+  ```
+
+  <br/>
+
+  So what i have done is, cropped out the first image coordinates. What we will be doing is changing the coordinates every 0.8s and looping it infinitely.
+
+  ```css
+  @-webkit-keyframes play {
+    from { background-position:    0px; }
+    to { background-position: -500px; }
+  }
+
+  @-moz-keyframes play {
+    from { background-position:    0px; }
+    to { background-position: -500px; }
+  }
+
+  @-ms-keyframes play {
+    from { background-position:    0px; }
+    to { background-position: -500px; }
+  }
+
+  @-o-keyframes play {
+    from { background-position:    0px; }
+    to { background-position: -500px; }
+  }
+
+  @keyframes play {
+    from { background-position:    0px; }
+    to { background-position: -500px; }
+  }
+  ```
+
+  <br/>
+
+  ### Output:
+
+  <br/>
+
+  [![sprite-gif.gif](https://s7.gifyu.com/images/sprite-gif.gif)](https://gifyu.com/image/uxSr)
+
+  <br/>
+
+  # Limitations of using CSS Sprites
+
+  * You are restricted to the original image dimensions. If you need to stretch the element, resizing the background image is virtually impossible.
+  
+  * Repeating segment of the background image is not possible.
+
+  * In terms of accessibility, by using background images you remove the image tag from the markup, which could reduce the meaningfulness of the content.
+
+  * CSS Sprites may become daunting when the whole sprite image size becomes huge when compared to individual images, as the browser takes time to download and display it in screen. While using sprites, be aware of the image size.
+
+  * If an extra image has to be appended, the whole sprite has to be re-edited and re-uploaded.
+
+  # Conclusion
+
+  CSS Sprites are great for website performance. Before opting for sprites technique, think whether the element needs it, frequent changes will be done in the image or compare the size of the sprite images with individual images. If you don't foresee frequent changes to your images, then I don't see many disadvantages in using sprites.
+
+</div>
