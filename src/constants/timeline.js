@@ -1,5 +1,16 @@
 export default [
   {
+    date:'June 07 2020',
+    tag:'YOUTUBE',
+    desc:'Posted a video on "How to become a Front End Developer in 2020 - A Roadmap"',
+    link:{
+      linkWords:'Check out the Video',
+      ariaLabel:'check out the roadmap video',
+      externalLink:'https://www.youtube.com/watch?v=6fcUD_HdvmQ',
+    },
+  },
+
+  {
     date:'June 06 2020',
     tag:'VIRUS',
     desc:'3 months since Coronavirus spread and still the total cases are increasing exponentially in India',
