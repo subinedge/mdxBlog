@@ -1,0 +1,123 @@
+---
+title: CSS SASS vs SCSS - Which one should you use ?
+slug: css-sass-vs-scss-which-one-should-you-use
+image: ./images/image-2.jpg
+date: 2020-06-12
+author: Subin Sudhakaran
+tag: CSS
+---
+
+<div className="posts-wrapper">
+
+  So you have recently heard about SASS and looking into it and after that knowing there is SCSS, why there is two SASSes, what is the deal about both? Which one should i be using ? This is the question I will be answering in this post.
+
+
+  # What is SASS ?
+
+  CSS on its own can be fun, but stylesheets are getting larger, more complex, and harder to maintain. This is where SASS comes into play, where it uses mixins, allows nesting of elements, usage of variables and much more. It is more of like following DRY principle.
+  Once you start using Sass, it will take your preprocessed Sass file and save it as a normal CSS file that you can use in your website.
+
+  <div className="blockquote">
+    In SASS, the indentation is very important as it differentiates the element is nested or it is separately declared.
+  </div>
+
+  <br/>
+
+  ### Syntax:
+
+  <br/>
+
+  ```css
+
+  SASS Code:
+  =========
+
+  nav
+    background:white
+    box-shadow:2px 2px 0 rgba(#333, 0.4)
+
+    ul
+      list-style:none
+      padding:0
+      margin:0
+
+
+  Compiled CSS code:
+  =================
+
+  nav {
+    background:white;
+    box-shadow:2px 2px 0 rgba(#333, 0.4);
+  }
+    
+  nav ul {
+    list-style:none;
+    padding:0;
+    margin:0;
+  }
+
+  ```
+
+  <br/>
+
+  As you can see in the SASS code above, the elimination of braces and semicolons makes it much more simpler, yet the maintanability of the code remains hard when the stylesheet gets longer. A little indentation mistake can cost you  severe headache.
+
+  # What is SCSS ?
+
+  SCSS stands for Sassy CSS ans its taking CSS syntax that we used to but its giving the superpowers that come with SASS. This is really handy because you can take a regular CSS file and rename it to .css to .scss and it is a valid SCSS file.
+
+  As i said, it uses the power of SASS, where we can use nesting of elements, mixins (this is like functions in JS), loops, variables andmuch more.
+
+  ### Syntax:
+
+  <br/>
+
+  ```css
+
+  SCSS Code:
+  =========
+
+  nav {
+    background:white;
+    box-shadow:2px 2px 0 rgba(#333, 0.4);
+
+    ul {
+      list-style:none;
+      padding:0;
+      margin:0;
+    }
+  }
+
+  Compiled CSS code:
+  =================
+
+  nav {
+    background:white;
+    box-shadow:2px 2px 0 rgba(#333, 0.4);
+  }
+    
+  nav ul {
+    list-style:none;
+    padding:0;
+    margin:0;
+  }
+
+  ```
+
+  <br/>
+
+  As you can see from the code above, it's much more simpler to read a SCSS file rather than SASS file because SCSS just looks exactly like CSS. And there are other few differences, not too much, but say for mixins the syntax will be little bit different between two languages, but the real main difference is the cury braces and indentation.
+
+  And as far as which one you should use and that's upto you. This is a decision you have to make. When i first started, i used SASS, i love how it looks, so pretty without all that extra stuff getting in the way. I used it for around 2 years and three main reasons for switching towards SCSS was :
+
+  1. Code Readability - I find much more difficult while trying to debug as there will be 1000s of line of code.
+
+  2. Similar to CSS - As far as the looks concern, SCSS is way similar to CSS and i often tend to add (not much, but VSCode autocompletes the property name with ;) semicolons, which i have to remove often.  
+
+  3. Popularity - I do think SCSS is so much popular and pretty much every tutorial that exists uses SCSS, even SASS official website shows demo peice of code with SCSS syntax. That doesn't mean you have to go with it just because its popular.
+
+  At the end, its you who is gonna write code, so prefer which one you find more easier to use and saves your time.
+
+  I PREFER SCSS !!!
+
+</div>
