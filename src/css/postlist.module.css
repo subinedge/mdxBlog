@@ -8,7 +8,8 @@
   text-transform: capitalize;
   font-size: 48px;
 }
-.posts h4, .newsletter {
+.posts h4,
+.newsletter {
   letter-spacing: 2px;
   text-transform: capitalize;
   font-size: 18px;
@@ -68,7 +69,7 @@
   .posts h1 {
     font-size: 40px;
   }
-/* 
+  /* 
   .form {
     width: 350px;
     display: grid;
@@ -80,14 +81,21 @@
   } */
 }
 
-/* 
 @media screen and (max-width: 450px) {
-  .form {
+  /* .form {
     width: 270px;
     display: grid;
     grid-template-columns: 1fr;
+  } */
+
+  .posts h1 {
+    font-size: 30px;
   }
-} */
+
+  .posts h4 {
+    font-size: 16px;
+  }
+}
 
 /* 
 @media screen and (max-width: 375px) {
@@ -98,14 +106,12 @@
   }
 } */
 
-
 @media screen and (min-width: 1400px) {
-
   .posts h1 {
     font-size: 60px;
   }
 
-   .posts h4 {
+  .posts h4 {
     font-size: 30px;
   }
 
@@ -116,12 +122,11 @@
 }
 
 @media screen and (min-width: 2000px) {
-
   .posts h1 {
     font-size: 80px;
   }
 
-   .posts h4 {
+  .posts h4 {
     font-size: 40px;
   }
 

@@ -36,7 +36,7 @@
 }
 
 .info .tag {
-  background: #006CFF;
+  background: #006cff;
   color: #fff;
   font-weight: 600;
   letter-spacing: 1px;
@@ -80,34 +80,46 @@
   }
 }
 
-@media screen and (max-width:400px) {
+@media screen and (max-width: 400px) {
   .info h2 {
     font-size: 24px;
   }
+
+  .image > div {
+    display: none;
+  }
+
+  /* .excerpt {
+    display: none;
+  } */
+
+  .card {
+    margin-bottom: 0;
+    padding: 0rem;
+  }
 }
 
-
-@media screen and (min-width:2000px) {
- .card {
-  margin-bottom: 2.5rem;
+@media screen and (min-width: 2000px) {
+  .card {
+    margin-bottom: 2.5rem;
   }
 
   .info h2 {
-  font-size: 30px;
+    font-size: 30px;
   }
 
   .info h6 {
-  font-size: 18px;
+    font-size: 18px;
   }
 
   .info .tag {
-  padding: 5px 8px 5px 8px;
-  margin-top: 15px;
-  font-size: 16px;
+    padding: 5px 8px 5px 8px;
+    margin-top: 15px;
+    font-size: 16px;
   }
 
   .info p:not(.tag) {
-  font-size: 20px;
-  padding: 10px 0 10px 0;
+    font-size: 20px;
+    padding: 10px 0 10px 0;
   }
 }
