@@ -1,0 +1,79 @@
+.newsletter {
+  letter-spacing: 1px;
+  font-size: 18px;
+  text-align: center;
+  margin: 3rem auto;
+  padding: 2rem;
+  width: 80vw;
+  max-width: 800px;
+  background-color: #006cff;
+  color: #fff;
+}
+
+.newsletter .message-header {
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.newsletter .message-content::-moz-selection {
+  background: #353534;
+}
+.newsletter .message-content::selection {
+  background: #353534;
+}
+
+.newsletter .message-content {
+  margin-bottom: 1rem;
+}
+
+.form {
+  width: 500px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr 200px;
+  grid-gap: 16px;
+}
+
+.form input[type="email"] {
+  border-radius: 3px;
+  padding: 0.6rem 1rem;
+  border: none;
+}
+
+.form input[type="email"]:focus {
+  /* outline: none; */
+}
+
+.form input[type="submit"] {
+  padding: 0;
+  border: 2px solid #fff;
+  font-size: 15px;
+  background: none;
+  cursor: pointer;
+  color: #fff;
+}
+
+@media screen and (max-width: 700px) {
+  .form {
+    width: 350px;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .form input[type="submit"] {
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .form {
+    width: 270px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .form {
+    width: 200px;
+  }
+}

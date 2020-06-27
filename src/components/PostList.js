@@ -1,28 +1,19 @@
-import React from 'react'
-import PostCard from './PostCard'
-import styles from '../css/postlist.module.css'
+import React from "react"
+import PostCard from "./PostCard"
+import Newsletter from "./Newsletter"
+import styles from "../css/postlist.module.css"
 
-const PostList = ({posts}) => {
+const PostList = ({ posts }) => {
   return (
     <section className={styles.posts}>
       <h1>Cookbook for FrontEnd Devs</h1>
       <h4>Front End Development made easy</h4>
 
-      {/* newsletter */}
-
-      {/* <div className={styles.newsletter}>
-        <h4>Get latest updates</h4> */}
-        {/* <h3>Join the list ! Understand JavaScript concepts</h3> */}
-
-        {/* <form className={styles.form}>
-          <input type="email" required placeholder="Enter your email address"/>
-          <input type="submit" value="Subscribe"/>
-        </form>
-      </div> */}
+      <Newsletter />
 
       <div className={styles.center}>
-        {posts.map(({node}, index)=> {
-          return <PostCard key={index} post={node}/>
+        {posts.map(({ node }, index) => {
+          return <PostCard key={index} post={node} />
         })}
       </div>
     </section>

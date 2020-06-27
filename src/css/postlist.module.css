@@ -8,8 +8,7 @@
   text-transform: capitalize;
   font-size: 48px;
 }
-.posts h4,
-.newsletter {
+.posts h4 {
   letter-spacing: 2px;
   text-transform: capitalize;
   font-size: 18px;
