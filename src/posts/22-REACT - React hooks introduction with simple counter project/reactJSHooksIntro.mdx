@@ -50,7 +50,7 @@ tag: REACT JS
 
 We have imported useState hook from React package which will take care of state manipulation in functional components. In the JSX part, we have hard-coded 0 in h1 element and added three butttons to increase/decrease and resetting the counter.
 
-Now we will introduce state hooks:
+In below, useState is a hook, which we will call inside a function to make it as local state.
 
 <br/>
 
@@ -75,7 +75,29 @@ Now we will introduce state hooks:
 
 <br/>
 
-React state hooks set us two values to set and manipulate state, One is variable which can contain array/string/number/boolean/object and also second parameter is the function that helps us to update the state (which is equivalent to this.setState in class components). In the above example, counter is the initial state value which is set as 0 (the value which you give in useState is the initial state).
+There is no compulsion that useState hook has to be used only once. It can be used many times as you wish.
+
+```jsx
+function App() {
+  // Declare multiple state variables!
+  const [counter, setCounter] = useState(0);
+  const [loading, setLoading] = useState(false);
+  const [error, isError] = useState(
+    [
+      {
+        id:1,
+        name:"Subin",
+        designation:"Front end developer"
+      }
+    ]
+  );
+  // ...
+}
+```
+
+<br/>
+
+React state hooks set us two values to set and manipulate state, One is variable which can contain array/string/number/boolean/object and also second parameter is the function that helps us to update the state (which is equivalent to ___this.setState___ in class components). In the above example, counter is the initial state value which is set as 0 (the value which you give in useState is the initial state).
 
 Once the initial state is set, we will pass counter variable value in the header h1 element, which will be set as 0.
 
