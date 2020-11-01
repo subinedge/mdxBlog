@@ -4,34 +4,32 @@ import styles from "../css/newsletter.module.css"
 import addToMailchimp from "gatsby-plugin-mailchimp"
 
 const Newsletter = () => {
-  const [input, setInput] = useState({
-    email: "",
-    message: "Get my weekly posts to your mail",
-  })
+  const [email, setEmail] = useState("")
+  const [message, setMessage] = useState("Get my weekly posts to your mail")
 
   const changeEmailHandler = event => {
-    setInput({ email: event.target.value })
+    setEmail(event.target.value)
   }
 
   const handleSubmit = e => {
     e.preventDefault()
-    setInput({ message: "Thanks for subscribing !" })
+    setMessage("Thanks for subscribing !")
 
-    addToMailchimp(input.email)
+    addToMailchimp(email)
 
-    setInput({ email: "" }) // once submitted, clear the email input
+    setEmail("") // once submitted, clear the email input
   }
 
   return (
     <>
       <div className={styles.newsletter}>
         {/* <h4 className={styles.messageHeader}>Get latest updates</h4> */}
-        <h3 className={styles.messageContent}>{input.message}</h3>
+        <h3 className={styles.messageContent}>{message}</h3>
 
         <form className={styles.form} onSubmit={handleSubmit}>
           <input
             type="email"
-            value={input.email}
+            value={email}
             onChange={changeEmailHandler}
             required
             placeholder="Email address"
