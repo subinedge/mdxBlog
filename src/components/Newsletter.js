@@ -9,11 +9,11 @@ const Newsletter = () => {
     message: "Get my weekly posts to your mail",
   })
 
-  changeEmailHandler = event => {
+  const changeEmailHandler = event => {
     setInput({ email: event.target.value })
   }
 
-  handleSubmit = e => {
+  const handleSubmit = e => {
     e.preventDefault()
     setInput({ message: "Thanks for subscribing !" })
 
