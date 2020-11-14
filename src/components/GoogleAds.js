@@ -1,10 +1,6 @@
 import React, { Component } from "react"
 
 class GoogleAds extends Component {
-  componentDidMount() {
-    return (window.adsbygoogle = window.adsbygoogle || []).push({})
-  }
-
   render() {
     return (
       <ins
