@@ -6,7 +6,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import SEO from "../components/SEO"
-import GoogleAds from "../components/GoogleAds"
+// import GoogleAds from "../components/GoogleAds"
 
 const postTemplate = ({ data }) => {
   const { title, date, author, image } = data.mdx.frontmatter
@@ -15,7 +15,7 @@ const postTemplate = ({ data }) => {
 
   return (
     <Layout>
-      <GoogleAds />
+      {/* <GoogleAds /> */}
       <SEO title={title} description={title} />
       <section className={styles.template}>
         <AniLink
