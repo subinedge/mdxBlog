@@ -13,7 +13,7 @@
 }
 
 .info h2 {
-  font-size: 26px;
+  font-size: 24px;
   text-transform: capitalize;
   margin-bottom: 10px;
 }
@@ -63,7 +63,7 @@
 } */
 
 .image > div {
-  height: 200px;
+  height: 150px;
 }
 @media screen and (min-width: 776px) {
   .card {
