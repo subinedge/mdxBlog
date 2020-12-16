@@ -1,0 +1,170 @@
+---
+title: REACTJS - Understanding React's useRef Hook
+slug: understanding-react-useref-hook-react-hooks
+image: ./images/image-2.jpg
+date: 2020-12-15
+author: Subin Sudhakaran
+tag: REACT JS
+---
+
+<div className="posts-wrapper">
+
+  The next hook we are going to learn about is useRef hook. This hook makes it possible to access DOM nodes/elements directly within functional components.
+
+  ## Three reasons for using useRef hook:
+
+  <br/>
+
+  - Preserves previous state values
+
+  - DOES NOT trigger re-render unlike useState while updating
+
+  - Targets DOM noes/elements
+
+  Let's see how to use it.
+
+  Import useRef hook like we did for useState, useEffect.
+
+  ```jsx
+  import React, { useRef } from "react";
+  ```
+
+  <br/>
+
+  In this example, we will create a text input with Submit button and while clicking the button, the value entered in the input dialog will be logged out.
+
+  ```jsx
+  return (
+    <>
+      <form>
+        <input type="text" />
+        <button type="submit" onClick={handleSubmit}>
+          Submit
+        </button>
+      </form>
+    </>
+  );
+  ```
+
+  <br/>
+
+  Now it's time to introduce the big boy !!! 
+  As said initially, the main usecase of useRef hook is targetting DOM nodes/elements and while updating the value, react won't re-render the component unlike useState.
+
+  Like useState, for useRef we will declare a vairable and assign initial value for it.
+
+  ```jsx
+  const refContainer = useRef(null);
+
+  console.log(refContainer)
+  ```
+
+  <br/>
+
+  So now refContainer is assigned useRef hook with null value. Let's log out the variable in console and see.
+
+  ![useRef initialization](./images/useRef_initialize.PNG)
+
+  <br/>
+
+  The refContainer returns an object with initial value passed to it. You can also pass inital value as some string to the input field. Let's try that.
+
+  ```jsx
+  const refContainer = useRef("Subin");
+
+  console.log(refContainer)
+  ```
+
+  <br/>
+
+  ![useRef initialization_1](./images/useRef_initialize_1.PNG)
+
+  <br/>
+
+  OK. So you understood this part of initialization in useRef I believe.
+  Next we will target DOM element (in this case, input element).
+
+  ```jsx
+  const refContainer = useRef(null);
+  const handleSubmit = (e) => {
+    console.log(refContainer);
+    e.preventDefault();
+  };
+
+  <input type="text" ref={refContainer}/>
+  // button onClick handler => handleSubmit
+  ```
+
+  <br/>
+
+  To target the DOM node, you need to provide reserved "ref" keyword in that element like we did above in input element, so that useRef hook knows which element to target and pass the initialized ref variable (in this case, refContainer).
+  
+  The console will output the DOM node in which ref keyword is initialized as below.
+
+  ![useRef initialization_2](./images/useRef_initialize_2.PNG)
+
+  <br/>
+
+  We will try to access the value of what we typed in the input field by accessing the "current" property inside the object and log it out.
+
+  ```jsx
+  const handleSubmit = (e) => {
+    console.log(refContainer.current.value);
+  };
+  ```
+
+  <br/>
+
+  ![useRef initialization_3](./images/useRef_initialize_3.PNG)
+
+  <br/>
+
+  One useCase of useRef is:
+  Every time we render something, say we have useState, useEffect used in our project, so everytime useEffect hook renders on state update we will update the ref value in input field by adding focus method.
+
+  ```jsx
+  useEffect(()=> {
+    refContainer.current.focus();
+  })
+  ```
+
+  <br/>
+
+  <div class="blockquote">
+  USEREF IS NOT A REPLACEMENT TO USESTATE. UseRef is mainly used for referring/accessing the DOM elements which won't get make component to re-render on updating values.
+  </div>
+
+  <br/>
+
+  ## Storing previous state values
+  
+  <br/>
+
+  In this example we will try to initialize and update the state. While updating the state we will also print out the previous state value through useRef.
+
+  ```jsx
+  const prevName = useRef(null);
+  const [name, setName] = useState("");
+
+  useEffect(()=> {
+    prevName.current = name;
+  },[name])
+
+  return (
+    <>
+      <input type="text" onChange={(e) => setName(e.target.value)} />
+      <div>State: {name}</div>
+      <div>useRef: {prevName.current}</div>
+    </>
+  )
+  ```
+
+  <br/>
+
+  ![useRef initialization_4](./images/useRef_initialize_4.PNG)
+
+  By this way, if we type "Subin", the previous state value which we logged out using useRef will be "Subi". The same way can be acheieved by using update state but it will cause the "component to re-render" which you can eliminate by using ref.
+
+  That's all about useRef hook, hope you understood the difference between useState and useRef and which one to use in your project.
+
+</div>
