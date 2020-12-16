@@ -11,6 +11,11 @@ tag: REACT JS
 
   The next hook we are going to learn about is useRef hook. This hook makes it possible to access DOM nodes/elements directly within functional components.
 
+  <div class="blockquote">
+  EDIT:
+    Added "forwardRef" concept explanation
+  </div>
+
   ## Three reasons for using useRef hook:
 
   <br/>
@@ -120,7 +125,7 @@ tag: REACT JS
   <br/>
 
   One useCase of useRef is:
-  Every time we render something, say we have useState, useEffect used in our project, so everytime useEffect hook renders on state update we will update the ref value in input field by adding focus method.
+  Every time we render something, say we have useState, useEffect used in our project, so everytime useEffect hook renders on state update, we will update the ref value in input field by adding focus method.
 
   ```jsx
   useEffect(()=> {
@@ -131,7 +136,7 @@ tag: REACT JS
   <br/>
 
   <div class="blockquote">
-  USEREF IS NOT A REPLACEMENT TO USESTATE. UseRef is mainly used for referring/accessing the DOM elements which won't get make component to re-render on updating values.
+  USEREF IS NOT A REPLACEMENT TO USESTATE. UseRef is mainly used for referring/accessing the DOM elements and update it without re-rendering the component.
   </div>
 
   <br/>
@@ -165,6 +170,66 @@ tag: REACT JS
 
   By this way, if we type "Subin", the previous state value which we logged out using useRef will be "Subi". The same way can be acheieved by using update state but it will cause the "component to re-render" which you can eliminate by using ref.
 
-  That's all about useRef hook, hope you understood the difference between useState and useRef and which one to use in your project.
+  ## How to pass ref to another component ?
+
+  <br/>
+
+  Let's say we have an input element in one component and the submit button in another component, the normal way of targetting DOM element (input field) is not possible as input and submit button lives in different components.
+
+  For that React has provided us with another resource called "forwardRef", which makes the above situtaion possible.
+
+  ### Official Definition in Reactjs.org:
+
+  <br/>
+
+  <div class="blockquote">
+    Ref forwarding is a technique for automatically passing a "ref" through a component to one of its children.
+  </div>
+
+  ### App.js (parent component):
+
+  <br/>
+
+  ```jsx
+  const refContainer = useRef(null);
+  const handleSubmit = () => {
+    refContainer.current.focus();
+  };
+
+  return (
+    <div>
+      <Input ref={refContainer} />
+      <button type="submit" onClick={handleSubmit}>
+        Submit
+      </button>
+    </div>
+  )
+  ```
+
+  <br/>
+
+  There is no difference here, since we initialized useRef variable and assigned null. Then referenced the variable in Input component which we are going to create in a minute. And handleSubmit handler.
+
+  ### Input.js (child component)
+
+  <br/>
+
+  ```jsx
+  const Input = React.forwardRef((props, ref) => {
+    return (
+      <div>
+        <input type="text" ref={ref} />
+      </div>
+    );
+  }
+  ```
+
+  <br/>
+
+  You may notice the "React.forwardRef()" function which receives arguments, props and ref. Pass the ref prop to input text field with "ref" keyword. 
+  
+  JOB DONE !!
+
+  That's all about useRef hook, hope you understood the difference between useState and useRef and how to use ref in another component. Happy learning !!
 
 </div>
