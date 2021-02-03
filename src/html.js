@@ -15,14 +15,16 @@ export default function HTML(props) {
           async
           src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
         ></script>
-        <script>
-          {`
-                    (adsbygoogle = window.adsbygoogle || []).push({
+        <script
+          type="text/javascript"
+          dangerouslySetInnerHTML={{
+            __html: `
+             (adsbygoogle = window.adsbygoogle || []).push({
                       google_ad_client: "ca-pub-9005811830300195",
                       enable_page_level_ads: true
-                    });
-                  `}
-        </script>
+                    })`,
+          }}
+        />
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>
